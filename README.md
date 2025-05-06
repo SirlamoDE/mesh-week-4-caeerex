@@ -1,4 +1,3 @@
-
 # Week 4 Assignment
 
 This project contains solutions to various JavaScript programming tasks for Week 4 of the CareerEX program. The tasks include implementing functions for grading, eligibility checks, and other logical operations. The project also includes an HTML file to link the JavaScript code for testing in a browser.
@@ -38,6 +37,39 @@ This project contains solutions to various JavaScript programming tasks for Week
 
 8. **Signup Validator**:
    - A function that ensures a user provides either an email or phone number before signing up.
+
+## Example Code
+
+Here is an example of how to use the **Switch Grader** function:
+
+```javascript
+// Example: Using the switchGrader function
+function switchGrader() {
+    let input = prompt("Enter your score: ");
+    let score = Number(input);
+
+    if (input === null) {
+        return "Input canceled.";
+    }
+
+    if (input.trim() === "" || isNaN(score)) {
+        return "Invalid input. Please enter a valid number.";
+    }
+
+    switch (true) {
+        case (score >= 90):
+            return "Excellent";
+        case (score >= 75):
+            return "Good";
+        case (score >= 50):
+            return "Average";
+        default:
+            return "Fail";
+    }
+}
+
+console.log(switchGrader());
+```
 
 ## How to Test
 
